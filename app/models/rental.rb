@@ -1,4 +1,6 @@
 class Rental < ApplicationRecord
+  has_many :movies
+  has_many :series
   belongs_to :rentable, polymorphic: true
 end
 
