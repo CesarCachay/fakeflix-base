@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
     resources :rentals, only: [:index, :show] do
       collection do
-        post 'movies/:id' => :movie
+        post 'movies/:id' => :movie #it show the name of the method I created in (rentals)
         post 'series/:id' => :serie
       end
     end

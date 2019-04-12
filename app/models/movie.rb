@@ -1,8 +1,11 @@
 class Movie < ApplicationRecord
   has_many :rentals, as: :rentable
   enum status: [:coming_soon, :preorder, :billboard]
-end
 
+  def rented
+    self.rentals.any?
+  end
+end
 # == Schema Information
 #
 # Table name: movies
